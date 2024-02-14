@@ -1,0 +1,552 @@
+*{
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+
+html, body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    background: #0a1111;
+}
+#text p {
+    font-size: 20px;
+    margin: 5px;
+}
+
+.container{
+    position: relative;
+    z-index: 10;
+    animation: fadeIn 5s ease-in-out forwards;
+}
+.valentines{
+    position: relative;
+    top: 50px;
+    cursor: pointer;
+    animation: up 3s linear infinite;
+}
+.envelope{
+    margin-top: 85%;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: #f08080;
+    display: grid;
+    place-items: center;
+}
+.envelope::before{
+    content: '';
+    position: absolute;
+    width: 212px;
+    height: 212px;
+    background: #f08080;
+    transform: rotate(45deg);
+    top: -105px;
+    left: 44px;
+    border-radius: 30px 0 0 0;
+}
+.front{
+    position: absolute;
+    border-right: 180px solid #ec9d95;
+    border-top: 95px solid transparent;
+    border-bottom: 100px solid transparent;
+    left: 120px;
+    top: 5px;
+    width: 0;
+    height: 0;
+    z-index: 10;
+    opacity: 97%;
+    transition: transform 0.5s ease-in-out;
+}
+.front::before{
+    position: absolute;
+    content: '';
+    border-left: 300px solid #f59580;
+    border-top: 195px solid transparent;
+    left: -120px;
+    top: -95px;
+    z-index: 15;
+    transition: transform 0.5s ease-in-out;
+}
+#scrolltext {
+  display: none;
+}
+
+.card{
+    position: relative;
+    width: 250px;
+    height: 200px;
+    background: #f7e3e3;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    transition: 1s;
+    overflow-x: hidden;
+    overflow: hidden;
+}
+
+.valentines .card {
+    transition: transform 0.5s ease;
+    transition: 0.7s;
+}
+
+.valentines:hover .card {
+    transform: translateY(-200px) scale(1.5);
+    width: 250%;
+    height: 100%;
+    z-index: 99;
+    animation: fadeIn 0.9s ease-in-out forwards;
+}
+.valentines:hover .card .text {
+    display: block;
+    animation: fadeIn 0.9s ease-in-out forwards;animation: fadeIn 0.9s ease-in-out forwards;
+}
+
+.valentines:hover .card:after {  
+    transform: translateY(0); 
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+.card .text{
+    display: none;
+    font-family: "Nanum Pen Script", cursive;
+    font-size: 15px;
+    text-align: center;
+    line-height: 25px;
+    color: #3b619b;
+}
+
+.card .heart::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: red;
+    border-radius: 0 50% 50% 0;
+    right: 0;
+    transform: rotate(-90deg);
+    transform-origin: top;
+}
+.card .heart::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: red;
+    right: -18px;
+}
+
+#tulip {
+    position: absolute;
+    width: 20%;
+    bottom: 0;
+    right: -10%;
+    rotate: -13deg;
+    animation: sway 12s infinite ease-in-out;
+}
+#tulip1 {
+    position: absolute;
+    width: 20%;
+    bottom: 0;
+    left: -10%;
+    rotate: 10deg;
+    animation: sway 10s infinite ease-in-out;
+}
+
+#tulips {
+  animation: fadeIn 5s ease-in-out forwards;
+}
+
+@keyframes sway {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0);
+    }
+    25% {
+        transform: translate(5px, -10px) rotate(-20deg);
+    }
+    50% {
+        transform: translate(15px, -0px) rotate(20deg);
+    }
+}
+
+
+@keyframes up{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+}
+.valentines::before{
+    content: '';
+    position: absolute;
+    width: 330px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgba(39, 82, 117, 0.1);
+    top: 265px;
+    left: -15px;
+    animation: scale 3s linear infinite;
+    
+}
+@keyframes scale{
+    0%, 100%{
+        transform: scaleX(1);
+    }
+    50%{
+        transform: scaleX(.85);
+    }
+}
+
+
+
+
+#snowfall {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+  }
+
+  .snow {
+    position: absolute;
+    border-radius:50%;
+    filter: blur(3px);
+    background-color: #f5acac;
+    width: 5px;
+    height: 5px;
+    top:-1000px;
+    box-shadow: 20px 20px 1px #f5bcbc, 60px 40px 1px #f5c8c8, 160px 135px 1px #f5c8c8, 260px 240px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 460px 440px 1px #f5c8c8, 560px 340px 1px #f5c8c8, 660px 240px 1px #f5c8c8, 760px 140px 1px #f5c8c8, 260px 640px 1px #f5c8c8, 160px 340px 1px #f5c8c8, 260px 440px 1px #f5c8c8, 760px 140px 1px #f5c8c8,860px 40px 1px #f5c8c8, 760px 140px 1px #f5c8c8, 1260px 120px 1px #f5c8c8, 1460px 10px 1px #f5c8c8,1560px 30px 1px #f5c8c8, 1590px 124px 1px #f5c8c8, 1680px 415px 1px #f5c8c8, 1720px 335px 1px #f5c8c8,1000px 212px 1px #f5c8c8, 990px 311px 1px #f5c8c8, 888px 122px 1px #f5c8c8, 765px 10px 1px #f5c8c8, 635px 15px 1px #f5c8c8, 554px 111px 1px #f5c8c8, 455px 222px 1px #f5c8c8, 125px 105px 1px #f5c8c8, 275px 96px 1px #f5c8c8, 245px 40px 1px #f5c8c8, 230px 70px 1px #f5c8c8, 285px 17px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 430px 210px 1px #f5c8c8, 523px 23px 1px #f5c8c8, 1650px 335px 1px #f5c8c8, 1777px 123px 1px #f5c8c8, 1800px 222px 1px #f5c8c8, 1360px 140px 1px #f5c8c8;
+    animation: snowfall 50s linear infinite;
+  }
+  
+  .snow:before {
+    content:"";
+    width:3px;
+    height:3px;
+    position: absolute;
+    background-color: #f5acac;
+    left: 200px;
+    top:-150px;
+    border-radius:50%;
+    box-shadow: 20px 20px 1px #f0b9b9, 60px 40px 1px #f5c8c8, 160px 135px 1px #f5c8c8, 260px 240px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 460px 440px 1px #f5c8c8, 560px 340px 1px #f5c8c8, 660px 240px 1px #f5c8c8, 760px 140px 1px #f5c8c8, 260px 640px 1px #f5c8c8, 160px 340px 1px #f5c8c8, 260px 440px 1px #f5c8c8, 760px 140px 1px #f5c8c8,860px 40px 1px #f5c8c8, 760px 140px 1px #f5c8c8, 1260px 120px 1px #f5c8c8, 1460px 10px 1px #f5c8c8,1560px 30px 1px #f5c8c8, 1590px 124px 1px #f5c8c8, 1680px 415px 1px #f5c8c8, 1720px 335px 1px #f5c8c8,1000px 212px 1px #f5c8c8, 990px 311px 1px #f5c8c8, 888px 122px 1px #f5c8c8, 765px 10px 1px #f5c8c8, 635px 15px 1px #f5c8c8, 554px 111px 1px #f5c8c8, 455px 222px 1px #f5c8c8, 125px 105px 1px #f5c8c8, 275px 96px 1px #f5c8c8, 245px 40px 1px #f5c8c8, 230px 70px 1px #f5c8c8, 285px 17px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 430px 210px 1px #f5c8c8, 523px 23px 1px #f5c8c8, 1650px 335px 1px #f5c8c8, 1777px 123px 1px #f5c8c8, 1800px 222px 1px #f5c8c8, 1360px 140px 1px #f5c8c8;
+    
+  }
+  
+  .snow:after {
+    content:"";
+    width:2px;
+    height:2px;
+    position: absolute;
+    background-color: #f3b0b0;
+    left: 300px;
+    top:-250px;
+    border-radius:50%;
+    filter: blur(10px);
+    box-shadow: 20px 20px 1px #f3b4b4, 60px 40px 1px #f5c8c8, 160px 135px 1px #f5c8c8, 260px 240px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 460px 440px 1px #f5c8c8, 560px 340px 1px #f5c8c8, 660px 240px 1px #f5c8c8, 760px 140px 1px #f5c8c8, 260px 640px 1px #f5c8c8, 160px 340px 1px #f5c8c8, 260px 440px 1px #f5c8c8, 760px 140px 1px #f5c8c8,860px 40px 1px #f5c8c8, 760px 140px 1px #f5c8c8, 1260px 120px 1px #f5c8c8, 1460px 10px 1px #f5c8c8,1560px 30px 1px #f5c8c8, 1590px 124px 1px #f5c8c8, 1680px 415px 1px #f5c8c8, 1720px 335px 1px #f5c8c8,1000px 212px 1px #f5c8c8, 990px 311px 1px #f5c8c8, 888px 122px 1px #f5c8c8, 765px 10px 1px #f5c8c8, 635px 15px 1px #f5c8c8, 554px 111px 1px #f5c8c8, 455px 222px 1px #f5c8c8, 125px 105px 1px #f5c8c8, 275px 96px 1px #f5c8c8, 245px 40px 1px #f5c8c8, 230px 70px 1px #f5c8c8, 285px 17px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 430px 210px 1px #f5c8c8, 523px 23px 1px #f5c8c8, 1650px 335px 1px #f5c8c8, 1777px 123px 1px #f5c8c8, 1800px 222px 1px #f5c8c8, 1360px 140px 1px #f5c8c8;
+  }
+  .snow1 {
+    position: absolute;
+    border-radius:50%;
+    filter: blur(3px);
+    background-color: #fac4c4;
+    width: 5px;
+    height: 5px;
+    top:-850px;
+    left:123px;
+    box-shadow: 20px 20px 1px #fccccc, 60px 40px 1px #f5c8c8, 160px 135px 1px #f5c8c8, 260px 240px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 460px 440px 1px #f5c8c8, 560px 340px 1px #f5c8c8, 660px 240px 1px #f5c8c8, 760px 140px 1px #f5c8c8, 260px 640px 1px #f8c1c1, 160px 340px 1px #f5c8c8, 260px 440px 1px #f5c8c8, 760px 140px 1px #f5c8c8,860px 40px 1px #f5c8c8, 760px 140px 1px #f5c8c8, 1260px 120px 1px #f5c8c8, 1460px 10px 1px #f5c8c8,1560px 30px 1px #f5c8c8, 1590px 124px 1px #f5c8c8, 1680px 415px 1px #f5c8c8, 1720px 335px 1px #f5c8c8,1000px 212px 1px #f5c8c8, 990px 311px 1px #f5c8c8, 888px 122px 1px #f5c8c8, 765px 10px 1px #f5c8c8, 635px 15px 1px #f5c8c8, 554px 111px 1px #f5c8c8, 455px 222px 1px #f5c8c8, 125px 105px 1px #f5c8c8, 275px 96px 1px #f5c8c8, 245px 40px 1px #f5c8c8, 230px 70px 1px #f5c8c8, 285px 17px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 430px 210px 1px #f5c8c8, 523px 23px 1px #f5c8c8, 1650px 335px 1px #f5c8c8, 1777px 123px 1px #f5c8c8, 1800px 222px 1px #f5c8c8, 1360px 140px 1px #f5c8c8;
+    animation-delay:-3s;
+    animation: snowfall 40s linear infinite;
+  }
+  
+  .snow1:before {
+    content:"";
+    width:7px;
+    height:7px;
+    position: absolute;
+    background-color: #f5c8c8;
+    left: 200px;
+    top:-350px;
+    border-radius:50%;
+    box-shadow: 20px 20px 1px #f5c8c8, 60px 40px 1px #f5c8c8, 160px 135px 1px #f5c8c8, 260px 240px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 460px 440px 1px #f5c8c8, 560px 340px 1px #f5c8c8, 660px 240px 1px #f5c8c8, 760px 140px 1px #f5c8c8, 260px 640px 1px #f5c8c8, 160px 340px 1px #f5c8c8, 260px 440px 1px #f5c8c8, 760px 140px 1px #f5c8c8,860px 40px 1px #f5c8c8, 760px 140px 1px #f5c8c8, 1260px 120px 1px #f5c8c8, 1460px 10px 1px #f5c8c8,1560px 30px 1px #f5c8c8, 1590px 124px 1px #f5c8c8, 1680px 415px 1px #f5c8c8, 1720px 335px 1px #f5c8c8,1000px 212px 1px #f5c8c8, 990px 311px 1px #f5c8c8, 888px 122px 1px #f5c8c8, 765px 10px 1px #f5c8c8, 635px 15px 1px #f5c8c8, 554px 111px 1px #f5c8c8, 455px 222px 1px #f5c8c8, 125px 105px 1px #f5c8c8, 275px 96px 1px #f5c8c8, 245px 40px 1px #f5c8c8, 230px 70px 1px #f5c8c8, 285px 17px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 430px 210px 1px #f5c8c8, 523px 23px 1px #f5c8c8, 1650px 335px 1px #f5c8c8, 1777px 123px 1px #f5c8c8, 1800px 222px 1px #f5c8c8, 1360px 140px 1px #f5c8c8;
+    
+  }
+  
+  .snow1:after {
+    content:"";
+    width:5px;
+    height:5px;
+    position: absolute;
+    background-color: #f5c8c8;
+    left: 300px;
+    top:-450px;
+    border-radius:50%;
+    filter: blur(10px);
+    box-shadow: 20px 20px 1px #f5c8c8, 60px 40px 1px #f5c8c8, 160px 135px 1px #f5c8c8, 260px 240px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 460px 440px 1px #f5c8c8, 560px 340px 1px #f5c8c8, 660px 240px 1px #f5c8c8, 760px 140px 1px #f5c8c8, 260px 640px 1px #f5c8c8, 160px 340px 1px #f5c8c8, 260px 440px 1px #f5c8c8, 760px 140px 1px #f5c8c8,860px 40px 1px #f5c8c8, 760px 140px 1px #f5c8c8, 1260px 120px 1px #f5c8c8, 1460px 10px 1px #f5c8c8,1560px 30px 1px #f5c8c8, 1590px 124px 1px #f5c8c8, 1680px 415px 1px #f5c8c8, 1720px 335px 1px #f5c8c8,1000px 212px 1px #f5c8c8, 990px 311px 1px #f5c8c8, 888px 122px 1px #f5c8c8, 765px 10px 1px #f5c8c8, 635px 15px 1px #f5c8c8, 554px 111px 1px #f5c8c8, 455px 222px 1px #f5c8c8, 125px 105px 1px #f5c8c8, 275px 96px 1px #f5c8c8, 245px 40px 1px #f5c8c8, 230px 70px 1px #f5c8c8, 285px 17px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 430px 210px 1px #f5c8c8, 523px 23px 1px #f5c8c8, 1650px 335px 1px #f5c8c8, 1777px 123px 1px #f5c8c8, 1800px 222px 1px #f5c8c8, 1360px 140px 1px #f5c8c8;
+  }
+  
+  .snow2 {
+    position: absolute;
+    border-radius:50%;
+    filter: blur(1.5px);
+    background-color: #f5c8c8;
+    width: 9px;
+    height: 9px;
+    top:-900px;
+    left:-50px;
+    box-shadow: 20px 20px 1px #f5c8c8, 60px 40px 1px #f5c8c8, 160px 135px 1px #f5c8c8, 260px 240px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 460px 440px 1px #f5c8c8, 560px 340px 1px #f5c8c8, 660px 240px 1px #f5c8c8, 760px 140px 1px #f5c8c8, 260px 640px 1px #f5c8c8, 160px 340px 1px #f5c8c8, 260px 440px 1px #f5c8c8, 760px 140px 1px #f5c8c8,860px 40px 1px #f5c8c8, 760px 140px 1px #f5c8c8, 1260px 120px 1px #f5c8c8, 1460px 10px 1px #f5c8c8,1560px 30px 1px #f5c8c8, 1590px 124px 1px #f5c8c8, 1680px 415px 1px #f5c8c8, 1720px 335px 1px #f5c8c8,1000px 212px 1px #f5c8c8, 990px 311px 1px #f5c8c8, 888px 122px 1px #f5c8c8, 765px 10px 1px #f5c8c8, 635px 15px 1px #f5c8c8, 554px 111px 1px #f5c8c8, 455px 222px 1px #f5c8c8, 125px 105px 1px #f5c8c8, 275px 96px 1px #f5c8c8, 245px 40px 1px #f5c8c8, 230px 70px 1px #f5c8c8, 285px 17px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 430px 210px 1px #f5c8c8, 523px 23px 1px #f5c8c8, 1650px 335px 1px #f5c8c8, 1777px 123px 1px #f5c8c8, 1800px 222px 1px #f5c8c8, 1360px 140px 1px #f5c8c8;
+    animation-delay:-4s;
+    animation: snowfall 60s linear infinite;
+  }
+  
+  .snow2:before {
+    content:"";
+    width:7px;
+    height:7px;
+    position: absolute;
+    background-color: #f5c8c8;
+    left: 200px;
+    top:-550px;
+    border-radius:50%;
+    box-shadow: 20px 20px 1px #f5c8c8, 60px 40px 1px #f5c8c8, 160px 135px 1px #f5c8c8, 260px 240px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 460px 440px 1px #f5c8c8, 560px 340px 1px #f5c8c8, 660px 240px 1px #f5c8c8, 760px 140px 1px #f5c8c8, 260px 640px 1px #f5c8c8, 160px 340px 1px #f5c8c8, 260px 440px 1px #f5c8c8, 760px 140px 1px #f5c8c8,860px 40px 1px #f5c8c8, 760px 140px 1px #f5c8c8, 1260px 120px 1px #f5c8c8, 1460px 10px 1px #f5c8c8,1560px 30px 1px #f5c8c8, 1590px 124px 1px #f5c8c8, 1680px 415px 1px #f5c8c8, 1720px 335px 1px #f5c8c8,1000px 212px 1px #f5c8c8, 990px 311px 1px #f5c8c8, 888px 122px 1px #f5c8c8, 765px 10px 1px #f5c8c8, 635px 15px 1px #f5c8c8, 554px 111px 1px #f5c8c8, 455px 222px 1px #f5c8c8, 125px 105px 1px #f5c8c8, 275px 96px 1px #f5c8c8, 245px 40px 1px #f5c8c8, 230px 70px 1px #f5c8c8, 285px 17px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 430px 210px 1px #f5c8c8, 523px 23px 1px #f5c8c8, 1650px 335px 1px #f5c8c8, 1777px 123px 1px #f5c8c8, 1800px 222px 1px #f5c8c8, 1360px 140px 1px #f5c8c8;
+    
+  }
+  
+  .snow2:after {
+    content:"";
+    width:5px;
+    height:5px;
+    position: absolute;
+    background-color: #f5c8c8;
+    left: 300px;
+    top:-650px;
+    border-radius:50%;
+    filter: blur(10px);
+    box-shadow: 20px 20px 1px #f5c8c8, 60px 40px 1px #f5c8c8, 160px 135px 1px #f5c8c8, 260px 240px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 460px 440px 1px #f5c8c8, 560px 340px 1px #f5c8c8, 660px 240px 1px #f5c8c8, 760px 140px 1px #f5c8c8, 260px 640px 1px #f5c8c8, 160px 340px 1px #f5c8c8, 260px 440px 1px #f5c8c8, 760px 140px 1px #f5c8c8,860px 40px 1px #f5c8c8, 760px 140px 1px #f5c8c8, 1260px 120px 1px #f5c8c8, 1460px 10px 1px #f5c8c8,1560px 30px 1px #f5c8c8, 1590px 124px 1px #f5c8c8, 1680px 415px 1px #f5c8c8, 1720px 335px 1px #f5c8c8,1000px 212px 1px #f5c8c8, 990px 311px 1px #f5c8c8, 888px 122px 1px #f5c8c8, 765px 10px 1px #f5c8c8, 635px 15px 1px #f5c8c8, 554px 111px 1px #f5c8c8, 455px 222px 1px #f5c8c8, 125px 105px 1px #f5c8c8, 275px 96px 1px #f5c8c8, 245px 40px 1px #f5c8c8, 230px 70px 1px #f5c8c8, 285px 17px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 360px 340px 1px #f5c8c8, 430px 210px 1px #f5c8c8, 523px 23px 1px #f5c8c8, 1650px 335px 1px #f5c8c8, 1777px 123px 1px #f5c8c8, 1800px 222px 1px #f5c8c8, 1360px 140px 1px #f5c8c8;
+  }
+
+
+  @keyframes snowfall {
+    100% {transform: translateY(1500px);}
+}
+
+
+
+
+.content {
+    position: relative;
+    z-index: 20;
+  }
+
+.hearts {
+    position: absolute;
+  }
+  
+  .heart1 {
+    position: absolute;
+    top:0;
+    animation: fall 25s linear infinite;
+  }
+  
+  .heart2 {
+    position: absolute;
+    top:0;
+    animation: fall2 30s linear infinite;
+  }
+  
+  .heart3 {
+    position: absolute;
+    top:-40px;
+    left:-100px;
+    animation: fall 10s linear infinite 1s;
+  }
+  
+  .heart4 {
+    position: absolute;
+    top:-40px;
+    left:300px;
+    animation: fall2 35s linear infinite 1.5s;
+  }
+  
+  .heart5 {
+    position: absolute;
+    top:-40px;
+    left:250px;
+    animation: fall3 20s linear infinite 2s;
+  }
+  .heart6 {
+    position: absolute;
+    top:-40px;
+    left:-250px;
+    animation: fall3 30s linear infinite 1.5s;
+  }
+  
+  .heart7 {
+    position: absolute;
+    top:-40px;
+    left:-350px;
+    animation: fall2 25s linear infinite .5s;
+  }
+  
+  .heart8 {
+    position: absolute;
+    top:-30px;
+    left:550px;
+    animation: fall3 20s linear infinite .5s;
+  }
+  
+  .heart9 {
+    position: absolute;
+    top:-35px;
+    left:150px;
+    animation: fall4 35s linear infinite .3s;
+  }
+  
+  .heart10 {
+    position: absolute;
+    top:-30px;
+    left:450px;
+    animation: fall5 30s linear infinite 1.3s;
+  }
+  
+  .heart11 {
+    position: absolute;
+    top:-430px;
+    left:650px;
+    animation: fall5 20s linear infinite 1.7s;
+  }
+
+.hearts img{
+    width: 15px;
+}
+
+
+
+
+
+
+  @keyframes fall {
+    0% {top:-410px; transform: translateX(-100px) rotateX(180deg);}
+    100% {top:400px; transform: translateX(250px) rotateX(-180deg);}
+  }
+  
+  @keyframes fall2 {
+    0% {top:-410px; transform: translateX(50px) rotateX(-90deg);}
+    100% {top:400px; transform: translateX(-350px) rotateX(180deg);}
+  }
+  
+  @keyframes fall3 {
+    0% {top:-430px; transform: translateX(0px) rotateX(-180deg);}
+    100% {top:400px; transform: translateX(-400px) rotateX(180deg);}
+  }
+  
+  @keyframes fall4 {
+    0% {top:-430px; transform: translateX(0px) rotateY(-180deg);}
+    100% {top:400px; transform: translateX(-400px) rotateY(180deg);}
+  }
+  
+  @keyframes fall5 {
+    0% {top:-410px; transform: translateX(-100px) rotateY(180deg);}
+    100% {top:400px; transform: translateX(250px) rotateY(-180deg);}
+  }
+
+
+
+
+
+
+  @media only screen and (max-width: 800px) {
+    *{
+      margin: 0;
+    }
+
+    body{
+      margin: 0;
+    }
+
+    .card{
+      width: 150px;
+      height: 150px;
+      overflow: scroll;
+    }
+
+    .container{
+      position: absolute;
+      z-index: 10;
+      animation: fadeIn 5s ease-in-out forwards;
+      margin: 50%;
+    }
+
+    #tulip {
+      width: 40%;
+      right: -100px;
+    }
+    #tulip1 {
+      width: 40%;
+      left: -100px;
+    }
+    #scrolltext {
+      display: block;
+    }
+
+    .envelope{
+      margin-top: 50%;
+      position: relative;
+      width: 245px;
+      height: 170px;
+      background: #f08080;
+      display: grid;
+      place-items: center;
+      
+    }
+    .envelope::before{
+      content: '';
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      background: #f08080;
+      transform: rotate(45deg);
+      top: -80px;
+      left: 44px;
+      border-radius: 25px 0 0 0;
+      
+    }
+
+    .front{
+      border-right: 125px solid #ec9d95;
+      border-top: 95px solid transparent;
+      border-bottom: 0px solid transparent;
+      left: 120px;
+      top: 5px;
+      width: 0;
+      height: 70px;
+
+    }
+    .front::before{
+      border-left: 200px solid #f59580;
+      border-top: 165px solid transparent;
+    }
+
+
+    .valentines:hover .card {
+      transform: translateY(-200px) scale(1.5);
+      width: 80%;
+      height: 180%;
+      z-index: 99;
+      animation: fadeIn 0.9s ease-in-out forwards;
+    }
+
+  }

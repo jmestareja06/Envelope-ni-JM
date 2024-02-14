@@ -1,0 +1,86 @@
+body{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    background: #0a1111;
+    color: white;
+    font-family: "Nanum Pen Script", cursive;
+}
+
+input {
+    display: none;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+button{
+    cursor: pointer;
+}
+
+#button, #button1 {
+    margin: 10%;
+    padding: 5%;
+    width: 20%;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: larger;
+    transition: 0.5s;
+}
+
+#button{
+    background-color: rgb(125, 196, 125);
+    animation: fadeIn 2s;
+}
+
+#button1{
+    background-color: rgb(224, 99, 176);
+    animation: fadeIn 6s;
+}
+
+#button:hover{
+    transform: scale(1.2);
+}
+
+#button1:hover{
+    transform: scale(1.2);
+}
+#submit{
+    background-color: none;
+    border: none;
+}
+img{
+    text-decoration: none;
+    background-color: none;
+    transition: 0.5s;
+    animation: beating 1s infinite;
+}
+
+img:hover{
+    transform: scale(1.2);
+}
+
+@keyframes beating {
+    0%, 100% {
+        transform: scale(1.1);
+    }
+    25% {
+        transform: scale(1.4) rotate(-20deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(20deg);
+    }
+}
